@@ -1,0 +1,25 @@
+                Developer
+                    │
+            git push origin main
+                    │
+                    ▼
+              GitHub Repository
+                    │
+          (Application YAML + K8s Manifests)
+                    │
+                    ▼
+               Argo CD (EKS)
+                    │
+        Watches Git Repository
+                    │
+                    ▼
+         Synchronizes Kubernetes
+                    │
+                    ▼
+      Deployment ── Service ── Pods
+                    │
+                    ▼
+          AWS Load Balancer (ELB)
+                    │
+                    ▼
+                 Browser
